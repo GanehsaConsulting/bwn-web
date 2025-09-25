@@ -1,9 +1,11 @@
 import { Geist, Geist_Mono, Mona_Sans } from "next/font/google";
 import "./globals.css";
 import { ComingSoon } from "@/components/coming-soon";
+import { Navbar } from "@/components/navbar";
+import { ThemeProvider } from "next-themes";
 
 const monaSans = Mona_Sans({
-  variable: "--font-mona-sans", 
+  variable: "--font-mona-sans",
   subsets: ["latin"],
 });
 
@@ -24,12 +26,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${monaSans.variable}  antialiased`}
       >
-        <ComingSoon/>
-        {/* {children} */}
+        {/* <ComingSoon/> */}
+        <ThemeProvider enableSystem={true} attribute="class" >
+          <Navbar>{children}</Navbar>
+        </ThemeProvider>
       </body>
     </html>
   );
