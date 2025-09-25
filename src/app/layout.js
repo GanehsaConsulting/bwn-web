@@ -1,5 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Mona_Sans } from "next/font/google";
 import "./globals.css";
+import { ComingSoon } from "@/components/coming-soon";
+
+const monaSans = Mona_Sans({
+  variable: "--font-mona-sans", 
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +26,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${monaSans.variable}  antialiased`}
       >
-        {children}
+        <ComingSoon/>
+        {/* {children} */}
       </body>
     </html>
   );
