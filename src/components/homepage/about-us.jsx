@@ -1,22 +1,17 @@
 import React from "react";
-import { Badge } from "../ui/badge";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { HeaderSection } from "../header-section";
 
 export const AboutUs = () => {
   return (
-    <section className="flex flex-col gap-5 sm:gap-8 margin py-10 md:py-16 min-h-screen">
-      <div className="space-y-4">
-        <Badge
-          variant="outline"
-          className="text-sm sm:text-lg md:text-xl rounded-full px-3 sm:px-4 md:px-5 py-1 md:py-2 w-fit border-main-2 bg-main-2/20 dark:border-main-1 dark:bg-main-1/20"
-        >
-          会社概要
-        </Badge>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold ">
-          About PT. Bifudo Warna Nusantara
-        </h1>
-      </div>
+    <section className="flex flex-col gap-5 sm:gap-8 margin py-10 md:py-16 min-h-screen ">
+      <HeaderSection
+        badge="会社概要"
+        badgeColor="border-main-2 bg-main-2/20 dark:border-main-1 dark:bg-main-1/20"
+        title1="About PT. Bifudo"
+        title2="Warna Nusantara"
+      />
 
       <div className="flex-1 w-full">
         <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] overflow-hidden rounded-sm">
@@ -30,24 +25,30 @@ export const AboutUs = () => {
           />
         </div>
       </div>
-      <div className="grid lg:grid-cols-3 gap-10">
-        <p className=" text-sm sm:text-xl font-semibold dark:font-normal text-main">
-          PT. Bifudo Warna Nusantara adalah perusahaan yang bergerak di bidang
-          pertanian, perkebunan, dan perikanan, yang menggabungkan inovasi
-          teknologi Jepang, praktik agrikultur alami, dan pengembangan sumber
-          daya manusia sebagai landasan utama dalam membangun ekosistem
-          agribisnis yang berkelanjutan dan berstandar internasional.
+      <div className="grid md:grid-cols-2 gap-10">
+        <p className=" text-sm font-poppins sm:text-3xl font-semibold dark:font-normal text-main">
+          PT. BWN berfokus pada agribisnis berkelanjutan melalui teknologi
+          Jepang, agrikultur alami, dan pengembangan SDM.
         </p>
-        <div className="lg:col-span-2 flex flex-col justify-center p-7 gap-5 bg-main-3/90 dark:bg-main-2/50 rounded-third" >
-          <p className=" text-sm sm:text-xl font-normal text-white">
+        <div className=" flex flex-col justify-center gap-3 ">
+          <p className=" text-sm font-normal ">
+            PT. Bifudo Warna Nusantara adalah perusahaan yang bergerak di bidang
+            pertanian, perkebunan, dan perikanan, yang menggabungkan inovasi
+            teknologi Jepang, praktik agrikultur alami, dan pengembangan sumber
+            daya manusia sebagai landasan utama dalam membangun ekosistem
+            agribisnis yang berkelanjutan dan berstandar internasional.
+          </p>
+          {/* <p className=" text-sm sm:text-xl font-normal text-white">
             Kami percaya bahwa pertanian masa depan bukan hanya tentang hasil
             panen, tetapi tentang bagaimana kita merawat alam, memberdayakan
             manusia, dan membangun solusi yang bertahan dalam jangka panjang.
             Karena itu, seluruh proses bisnis kami dirancang untuk menciptakan
             nilai tambah dari hulu ke hilir — dari edukasi, budidaya, hingga
             produk siap ekspor.
-          </p>
-          <Button variant={"secondary"} className={"w-fit rounded-full"} >Lihat Selengkapnya</Button>
+          </p> */}
+          <Button className={"w-fit rounded-full text-sm"}>
+            Lihat Selengkapnya
+          </Button>
         </div>
       </div>
     </section>

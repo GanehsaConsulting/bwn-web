@@ -22,7 +22,7 @@ export const HomeBanner = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden font-mona">
+    <section className="relative min-h-screen w-full overflow-hidden font-poppins">
       {/* Carousel Background */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">

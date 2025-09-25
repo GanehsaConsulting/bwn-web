@@ -1,12 +1,19 @@
-import { Geist, Geist_Mono, Mona_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Mona_Sans, Poppins } from "next/font/google";
 import "./globals.css";
-import { ComingSoon } from "@/components/coming-soon";
+// import { ComingSoon } from "@/components/coming-soon";
 import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "next-themes";
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // ✅ wajib isi
+});
 
 const monaSans = Mona_Sans({
   variable: "--font-mona-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "700"], // isi sesuai kebutuhan
 });
 
 const geistSans = Geist({
@@ -28,10 +35,10 @@ export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${monaSans.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${monaSans.variable} ${poppins.variable} antialiased`}
       >
         {/* <ComingSoon/> */}
-        <ThemeProvider enableSystem={true} attribute="class" >
+        <ThemeProvider enableSystem={true} attribute="class">
           <Navbar>{children}</Navbar>
         </ThemeProvider>
       </body>
