@@ -72,13 +72,14 @@ export const Navbar = ({ children }) => {
       )}
 
       <div
-        className={`flex items-center justify-between z-50 fixed top-2 left-2 right-2 w-auto px-2 rounded-third min-h-[52px] duration-300 ease-in-out py-2
-          ${expandedId ? " dark:bg-darkColor" : ""}
-          ${
-            isScrolled
-              ? "margin dark:bg-darkColor/40 shadow-custom bg-white dark:bg-dark-color border border-neutral-300/50 dark:border-secondaryGray/10"
-              : " dark:bg-darkColor mt-2"
-          }`}
+        className={`flex items-center justify-between fixed top-0 left-0 right-0 z-50
+    min-h-[64px] px-4 sm:px-8 lg:px-12 py-2 transition-all duration-300
+    ${expandedId ? "bg-dark-color dark:bg-dark-color" : ""}
+    ${
+      isScrolled
+        ? "bg-white dark:bg-dark-color shadow-md border-b border-neutral-300/30 dark:border-secondaryGray/20"
+        : "bg-transparent"
+    }`}
       >
         <Logo isScrolled={isScrolled} />
 

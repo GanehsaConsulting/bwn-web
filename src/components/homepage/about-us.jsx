@@ -5,7 +5,7 @@ import { HeaderSection } from "../header-section";
 
 export const AboutUs = () => {
   return (
-    <section className="flex flex-col gap-5 sm:gap-8 margin py-10 md:py-16 min-h-screen ">
+    <section className="flex flex-col gap-5 sm:gap-8 margin my-15 py-10 md:py-16 min-h-screen ">
       <HeaderSection
         badge="会社概要"
         badgeColor="border-main-2 bg-main-2/20 dark:border-main-1 dark:bg-main-1/20"
@@ -16,7 +16,7 @@ export const AboutUs = () => {
       <div className="flex-1 w-full">
         <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] overflow-hidden rounded-sm">
           <Image
-            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://plus.unsplash.com/premium_photo-1715681826184-2b9bf52f69a4?q=80&w=1220&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Background image"
             fill
             className="object-cover"
