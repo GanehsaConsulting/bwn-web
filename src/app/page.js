@@ -1,4 +1,5 @@
 import { AboutUs } from "@/components/homepage/about-us";
+import { CompanyStrengths } from "@/components/homepage/company-strengths";
 import { HomeBanner } from "@/components/homepage/home-banner";
 import { VisionMission } from "@/components/homepage/vision-mission";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HomeBanner/>
       <AboutUs/>
       <VisionMission/>
+      <CompanyStrengths/>
     </main>
   );
 }

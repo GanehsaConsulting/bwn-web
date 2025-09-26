@@ -10,7 +10,7 @@ export const RightSection = () => {
           src="https://plus.unsplash.com/premium_photo-1678997779953-4bc1966178dd?q=80&w=1273&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="contact illustration"
           fill
-          className="object-cover opacity-"
+          className="object-cover "
         />
       </div>
 

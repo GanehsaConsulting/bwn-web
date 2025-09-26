@@ -1,6 +1,6 @@
 import { Badge } from "./ui/badge";
 
-export const HeaderSection = ({ badgeColor, badge, title1, title2 }) => {
+export const HeaderSection = ({ badgeColor, badge, title1, title2, titleStyle }) => {
   return (
     <div className="space-y-4 font-poppins">
       <Badge
@@ -9,7 +9,7 @@ export const HeaderSection = ({ badgeColor, badge, title1, title2 }) => {
       >
         {badge}
       </Badge>
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold ">
+      <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold ${titleStyle} `}>
         {title1} <br /> {title2}
       </h1>
     </div>
