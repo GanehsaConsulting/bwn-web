@@ -53,10 +53,10 @@ export const HomeBanner = () => {
         {/* Heading & Description */}
         <div></div>
         <div >
-          <h1 className="text-4xl md:text-7xl font-semibold text-white leading-tight">
-            Inovasi Jepang, 
+          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+            Menumbuhkan Masa Depan, 
             <br />
-            Harmoni Alam Nusantara
+            Secara Alami dan Berstandar Dunia.
           </h1>
         </div>
       </div>
