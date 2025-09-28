@@ -1,3 +1,5 @@
+import { CTA } from "@/components/cta";
+import { Footer } from "@/components/footer";
 import { AboutUs } from "@/components/homepage/about-us";
 import { CompanyStrengths } from "@/components/homepage/company-strengths";
 import { HomeBanner } from "@/components/homepage/home-banner";
@@ -10,6 +12,8 @@ export default function Home() {
       <AboutUs/>
       <VisionMission/>
       <CompanyStrengths/>
+      <CTA/>
+      <Footer/>
     </main>
   );
 }

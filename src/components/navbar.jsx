@@ -73,7 +73,7 @@ export const Navbar = ({ children }) => {
 
       <div
         className={`flex items-center justify-between fixed top-0 left-0 right-0 z-50
-    min-h-[64px] px-4 sm:px-8 lg:px-12 py-2 transition-all duration-300
+    min-h-[64px] px-4 sm:px-8 lg:px-12 py-2 transition-all duration-300 
     ${expandedId ? "bg-dark-color dark:bg-dark-color" : ""}
     ${
       isScrolled
