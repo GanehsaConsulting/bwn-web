@@ -20,7 +20,7 @@ export const ArticleBanner = () => {
         {/* text */}
         <div className="space-y-3 font-poppins absolute bottom-0 p-10">
             <Badge className={"bg-main-2/30 border-main-2 text-white text-base backdrop-blur-2xl"} variant={"outline"} >Nature</Badge>
-          <h1 className="text-[60px] font-bold text-white">Lorem ipsum dolor sit amet.</h1>
+          <h1 className="text-4xl sm:text-[60px] font-bold text-white">Lorem ipsum dolor sit amet.</h1>
           <p className="text-lg line-clamp-2 text-white/70" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae temporibus blanditiis debitis perferendis doloribus amet deserunt dolores ullam velit non iusto quasi, saepe hic, sequi odio, doloremque cupiditate odit pariatur.</p>
           <Link href={"/"}  >
             <Button className="mt-5 rounded-full" variant={"secondary"} >Lihat Selengkapnya..</Button>

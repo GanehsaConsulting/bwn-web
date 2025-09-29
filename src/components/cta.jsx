@@ -5,7 +5,7 @@ import Image from "next/image";
 export const CTA = () => {
   return (
     <section className="flex justify-center items-center margin">
-      <div className="relative w-full h-[200px] sm:h-[300px] overflow-hidden rounded-third">
+      <div className="relative w-full h-[400px] sm:h-[350px] overflow-hidden rounded-third">
         {/* Background Image full mengikuti container */}
         <Image
           src="https://i.pinimg.com/736x/ec/95/b8/ec95b8b285419ddac902430604a3e5ee.jpg"

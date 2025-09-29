@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer";
 
 export default function ArticlePage(){
     return (
-        <main className="bg-white h-fit w-full pb-20" >
+        <main className="bg-white dark:bg-dark-color h-fit w-full pb-20" >
             <ArticleBanner/>
             <ArticleList/>
             <ArticleRecommend/>
