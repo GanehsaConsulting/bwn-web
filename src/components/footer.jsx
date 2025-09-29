@@ -7,18 +7,18 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export const Footer = () => {
   return (
-    <footer className="margin ">
+    <footer className="margin py-14">
       <section className="bg-sec-light dark:bg-sec-dark rounded-main shadow-2xl mx-auto max-w-7xl px-6 py-12">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* Left: Logo + Description + Social Media */}
-          <div className="flex flex-col gap-5 max-w-md">
+          <div className="flex flex-col gap-5">
             <Image
               src="/logo-typography.png"
               alt="logo-footer"
               width={180}
               height={60}
-              className="object-contain"
+              className="object-contain dark:grayscale dark:brightness-9000"
             />
             <p className="text-sm leading-relaxed text-dark-color/60 dark:text-white/70">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -85,7 +85,7 @@ export const Footer = () => {
         </div>
 
         {/* Divider */}
-        <hr className="my-10 border-gray-700" />
+        <hr className="my-10 border-gray-500" />
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-5 text-sm text-gray-400">

@@ -159,7 +159,7 @@ export const ServiceMenu = ({ expandedId, onClose }) => {
       {/* Mobile Layout */}
       <div className="block md:hidden pt-17 pb-15">
         {/* Quick Navigation - Compact Grid */}
-        <div className="mb-5">
+        <div className="mb-5 bg-red-500">
           <h2 className="text-xs font-semibold text-secondaryLight/60 dark:text-secondaryLight/60 uppercase tracking-wider mb-3">
             Navigate
           </h2>
@@ -303,8 +303,8 @@ export const ServiceMenu = ({ expandedId, onClose }) => {
       </div>
 
       {/* Desktop Layout - Fixed Image Container */}
-      <div className="hidden md:block bg-lightColor dark:bg-darkColor px-5 py-5 rounded-main">
-        <div className="grid grid-cols-6 gap-10">
+      <div className="hidden md:block dark:bg-darkColor px-5 py-5 rounded-main">
+        <div className="grid grid-cols-6 gap-10 ">
           <div className="col-span-4">
             <div className="flex items-center justify-between">
               <p className="text-sm font-bold tracking-wide text-secondaryDark dark:text-secondaryLight opacity-80 uppercase">

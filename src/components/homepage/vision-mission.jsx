@@ -65,7 +65,7 @@ export const VisionMission = () => {
       className="md:mb-0 mb-24 flex flex-col gap-10"
     >
       {/* VISION */}
-      <div className="px-5" >
+      <div className="margin">
         <div className="relative w-full h-[80vh] min-h-[400px] overflow-hidden rounded-third">
           {/* Background Image */}
           <img
@@ -80,9 +80,15 @@ export const VisionMission = () => {
           {/* Content di pojok kiri bawah */}
           <div className="absolute bottom-0 left-0 z-10 p-6 sm:p-10 font-poppins sm:text-left text-center">
             <div className="max-w-2xl space-y-4 sm:space-y-6">
-              <h1 className="text-[60px] sm:text-[120px] md:text-[200px] lg:text-[250px] font-semibold text-white drop-shadow-lg">
-                VISION
-              </h1>
+              {/* <h1 className="text-2xl sm:text-[100px] font-semibold text-white drop-shadow-lg">
+                OUR VISION
+              </h1> */}
+              <HeaderSection
+                badge="ミッション"
+                badgeColor="border-main-2 bg-main-2/20 drop-shadow-blur text-white dark:border-main-1 dark:bg-main-1/20 backdrop-blur-md shadow-md"
+                title1="OUR VISION"
+                titleStyle="text-white"
+              />
               <p className="text-white text-sm sm:text-lg lg:text-xl sm:leading-relaxed bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-4 sm:p-6">
                 Menjadi pionir dalam agribisnis berkelanjutan yang berbasis
                 teknologi, pendidikan, dan produk alami berkualitas global.
@@ -93,7 +99,7 @@ export const VisionMission = () => {
       </div>
 
       {/* MISSION */}
-      <div >
+      <div>
         <div className="header-margin text-start mb-5 font-poppins">
           <HeaderSection
             badge="ミッション"
@@ -106,7 +112,7 @@ export const VisionMission = () => {
           {mission.map((el, idx) => (
             <div
               key={idx}
-              className={`min-w-[85lvw] md:min-w-[25lvw] h-[70lvh] rounded-third overflow-hidden relative group
+              className={`min-w-[85lvw] md:min-w-[25lvw] h-[70lvh] rounded-main overflow-hidden relative group
                                 ${idx === 0 ? "ml-5 md:ml-24 2xl:ml-80" : ""} ${
                 idx === mission.length - 1 ? "mr-5 md:mr-24 2xl:mr-80" : ""
               }
@@ -118,11 +124,13 @@ export const VisionMission = () => {
                 alt={el.indo}
               />
               <div className="gradient-blur h-[50%] duration-300 ease-in-out bg-gradient-to-t from-dark-color to-transparent absolute "></div>
+              {/* icon */}
               <div className="absolute top-5 left-5 text-2xl bg-main-2/80 backdrop-blur-md p-3 rounded-third">
                 <div className="text-white">{el.icon}</div>
               </div>
-              <div className="absolute z-[50] bottom-5 left-5 right-5 text-white ">
-                <div className="md:translate-y-[50%] group-hover:translate-y-0 duration-200 delay-75">
+              <div className="absolute z-[50] bottom-7 left-5 right-5 text-white ">
+                {/* text scroll */}
+                <div className="md:translate-y-[10%] group-hover:translate-y-0 line-clamp-2  duration-200 delay-75 group-hover:line-clamp-none">
                   <div className="text-base font-medium tracking-wide brightness-200 opacity-80">
                     {el.indo}
                   </div>

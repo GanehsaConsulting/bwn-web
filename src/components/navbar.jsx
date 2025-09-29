@@ -11,35 +11,28 @@ import { Button } from "./ui/button";
 import { LuSearch } from "react-icons/lu";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const Logo = ({ isScrolled }) => (
+const Logo = ({  }) => (
   <Link href="/" className=" flex items-center gap-1 z-50 ml-3">
     <img
-      className={`hidden sm:block h-12 transition-all duration-300 dark:grayscale dark:brightness-10000 ${
-        isScrolled ? " rounded  py-1" : "grayscale brightness-10000"
-      }`}
+      className={`hidden sm:block h-10 transition-all duration-300 dark:grayscale dark:brightness-10000`}
       src="/logo-typography.png"
       alt="logo-dekstop"
     />
     <img
-      className={`sm:hidden h-20 transition-all duration-300 dark:grayscale dark:brightness-10000 ${
-        isScrolled ? " rounded px-2 py-1" : "grayscale brightness-10000"
-      }`}
+      className={`sm:hidden h-20 transition-all duration-300 dark:grayscale dark:brightness-10000`}
       src="/logo-1.png"
       alt="logo-mobile"
     />
   </Link>
 );
 
-const LinkItem = ({ href, children, isActive, isScrolled }) => (
+const LinkItem = ({ href, children, isActive }) => (
   <Link
     href={href}
     className={`px-3 py-1 rounded-main transition-all duration-300 text-sm relative hover:underline decoration-[1.5px] underline-offset-3 hover:font-medium hover:text-darkColor dark:hover:text-lightColor
       ${
         isActive
-          ? "underline font-medium text-dark-color dark:text-white"
-          : isScrolled
-          ? "text-muted-white dark:text-lightColor"
-          : "text-white dark:text-white"
+          && "underline font-medium text-dark-color dark:text-white"
       }`}
   >
     {children}
@@ -47,7 +40,7 @@ const LinkItem = ({ href, children, isActive, isScrolled }) => (
 );
 
 export const Navbar = ({ children }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   const [expandedId, setExpandedId] = useState(null);
 
   const path = usePathname();
@@ -55,33 +48,28 @@ export const Navbar = ({ children }) => {
     href === "/" ? path === "/" : path.startsWith(href);
   const isServicePage = path.startsWith("/services") || path === "/services";
 
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 0);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => setIsScrolled(window.scrollY > 0);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <>
       {/* Blur effect on scroll */}
-      {isScrolled && (
+      {/* {isScrolled && (
         <>
           <div className="fixed top-0 left-0 right-0 h-20 z-40 pointer-events-none linear-blur-navbar" />
-          {/* <div className="duration-300 md:sticky mx-2 sm:mx-10 top-2 left-2 right-2 w-auto rounded-main h-[52px] z-30 backdrop-blur-[4px]" /> */}
+          {/* <div className="duration-300 md:sticky mx-2 sm:mx-10 top-2 left-2 right-2 w-auto rounded-main h-[52px] z-30 backdrop-blur-[4px]" /> 
         </>
-      )}
+      )} */}
 
       <div
         className={`flex items-center justify-between fixed top-0 left-0 right-0 z-50
-    min-h-[64px] px-4 sm:px-8 lg:px-12 py-2 transition-all duration-300 
-    ${expandedId ? "bg-dark-color dark:bg-dark-color" : ""}
-    ${
-      isScrolled
-        ? "bg-white dark:bg-dark-color shadow-md border-b border-neutral-300/30 dark:border-secondaryGray/20"
-        : "bg-transparent"
-    }`}
+    min-h-[64px] px-4 sm:px-8 lg:px-12 py-2 transition-all bg-white dark:bg-dark-color drop-shadow-2xl duration-300 
+    ${expandedId ? "bg-dark-color dark:bg-dark-color" : ""}`}
       >
-        <Logo isScrolled={isScrolled} />
+        <Logo  />
 
         {/* Menu (Desktop) */}
         <div className={`hidden sm:flex items-center`}>
@@ -90,7 +78,7 @@ export const Navbar = ({ children }) => {
               <LinkItem
                 href="/"
                 isActive={isActive("/")}
-                isScrolled={isScrolled}
+                // isScrolled={isScrolled}
               >
                 Home
               </LinkItem>
@@ -99,7 +87,7 @@ export const Navbar = ({ children }) => {
               <LinkItem
                 href="/about-us"
                 isActive={isActive("/about-us")}
-                isScrolled={isScrolled}
+                // isScrolled={isScrolled}
               >
                 About Us
               </LinkItem>
@@ -110,11 +98,9 @@ export const Navbar = ({ children }) => {
                 title="Services"
                 expandedId={expandedId}
                 setExpandedId={setExpandedId}
-                className={`absolute dark:text-dark-color ${
-                  isScrolled ? "text-dark-color" : "text-white"
-                }`}
+                className={`absolute dark:text-dark-color`}
                 isActive={isServicePage}
-                isScrolled={isScrolled}
+                // isScrolled={isScrolled}
               >
                 <ServiceMenu
                   onClose={() => setExpandedId(null)}
@@ -126,7 +112,7 @@ export const Navbar = ({ children }) => {
               <LinkItem
                 href="/article"
                 isActive={isActive("/article")}
-                isScrolled={isScrolled}
+                // isScrolled={isScrolled}
               >
                 Article
               </LinkItem>
@@ -135,7 +121,8 @@ export const Navbar = ({ children }) => {
               <LinkItem
                 href="/contact"
                 isActive={isActive("/contact")}
-                isScrolled={isScrolled}
+                // isScrolled={isScrolled}
+
               >
                 Contact
               </LinkItem>
@@ -175,7 +162,7 @@ export const Navbar = ({ children }) => {
               setExpandedId={setExpandedId}
               className="absolute"
               isActive={isServicePage}
-              isScrolled={isScrolled}
+              // isScrolled={isScrolled}
               isMobile
             >
               <ServiceMenu
@@ -189,10 +176,10 @@ export const Navbar = ({ children }) => {
 
       {/* Backdrop overlay */}
       <div
-        className={`fixed top-0 left-0 w-screen h-screen transition-opacity duration-300 z-10 bg-black/50 dark:bg-white/50
+        className={`fixed top-0 left-0 w-screen h-screen transition-opacity duration-300 z-10  dark:bg-white/50 bg-black/50
           ${
             expandedId
-              ? "opacity-100 backdrop-blur-[4px]"
+              ? "opacity-100 backdrop-blur-[14px]"
               : "opacity-0 pointer-events-none"
           }
         `}
