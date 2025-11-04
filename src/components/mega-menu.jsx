@@ -110,7 +110,7 @@ export const MegaMenuNavbar = ({
             {/* Mobile Mega Menu */}
             {isMobile && (
                 <div
-                    className={`z-20 fixed inset-0 w-full h-screen bg-white dark:bg-darkColor/50 transition-all duration-700 ease-[cubic-bezier(0.25, 0.1, 0.25, 1)] ${isExpanded
+                    className={`z-20 fixed inset-0 w-full h-screen bg-white dark:bg-dark-color/50 transition-all duration-700 ease-[cubic-bezier(0.25, 0.1, 0.25, 1)] ${isExpanded
                         ? 'pointer-events-auto opacity-100 translate-y-0 overflow-y-auto'
                         : 'pointer-events-none opacity-0 translate-y-5 overflow-hidden'
                         }`}

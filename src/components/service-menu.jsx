@@ -159,7 +159,7 @@ export const ServiceMenu = ({ expandedId, onClose }) => {
       {/* Mobile Layout */}
       <div className="block md:hidden pt-17 pb-15">
         {/* Quick Navigation - Compact Grid */}
-        <div className="mb-5 bg-red-500">
+        <div className="mb-5 ">
           <h2 className="text-xs font-semibold text-secondaryLight/60 dark:text-secondaryLight/60 uppercase tracking-wider mb-3">
             Navigate
           </h2>

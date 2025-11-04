@@ -19,7 +19,7 @@ const Logo = ({  }) => (
       alt="logo-dekstop"
     />
     <img
-      className={`sm:hidden h-20 transition-all duration-300 dark:grayscale dark:brightness-10000`}
+      className={`sm:hidden h-10 transition-all duration-300 dark:grayscale dark:brightness-10000`}
       src="/logo-1.png"
       alt="logo-mobile"
     />
@@ -66,7 +66,7 @@ export const Navbar = ({ children }) => {
 
       <div
         className={`flex items-center justify-between fixed top-0 left-0 right-0 z-50
-    min-h-[64px] px-4 sm:px-8 lg:px-12 py-2 transition-all bg-white dark:bg-dark-color drop-shadow-2xl duration-300 
+    min-h-[64px] px-4 sm:px-8 lg:px-12 py-2 transition-all bg-white dark:bg-dark-color drop-shadow-2xl duration-300 z-[100]
     ${expandedId ? "bg-dark-color dark:bg-dark-color" : ""}`}
       >
         <Logo  />
